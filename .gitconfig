@@ -1,8 +1,8 @@
 [user]
-	name  = David Silva
-	email = david.silva@digital.cabinet-office.gov.uk
+	name  = Tijmen Brommet
+	email = tijmen@gmail.com
 [github]
-  user = davidslv
+  user = tijmenb
 [color]
   status = auto
   diff   = auto
@@ -22,6 +22,7 @@
   changed   = green
   untracked = cyan
 [alias]
+  oops = reset --soft HEAD~1
   show = show --format=medium
   pr = pull-request
   br = branch
@@ -40,7 +41,7 @@
   last     = log -p -n1
   today    = log --since='1 Day Ago'
   recent   = log --stat --since='3 Hours Ago' --graph --pretty=oneline --abbrev-commit --date=relative
-  me       = log --author='David Silva'
+  me       = log --author='Tijmen Brommet'
   ctags    = !.git/hooks/ctags
   lol      = log --pretty=oneline --abbrev-commit --graph --decorate
   files    = show --pretty="format:" --name-only
@@ -60,7 +61,6 @@
 [apply]
   whitespace = nowarn
 [push]
-  # push current branch even if you've never pushed it before
   default = current
 [heroku]
   account = personal
@@ -68,13 +68,5 @@
   keepBackup = false
 [grep]
   lineNumber = true
-
-[hub]
-protocol = https
-host = github.gds
-
-[credential]
-helper = /opt/boxen/bin/boxen-git-credential
-
 [core]
-excludesfile = /opt/boxen/config/git/gitignore
+  excludesfile = /Users/tijmen/.gitignore_global

@@ -77,6 +77,3 @@ PROMPT_COMMAND=set_bash_prompt
 
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
-
-# require rbenv
-eval "$(rbenv init -)"

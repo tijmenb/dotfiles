@@ -11,3 +11,9 @@ git clone git@github.com:tijmenb/dotfiles.git
 cd dotfiles
 ./bootstrap.sh
 ```
+
+## Updating OSX
+
+```
+source ~/.osx
+```

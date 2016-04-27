@@ -49,7 +49,27 @@ alias h="heroku"
 # Typos
 alias rail='rails'
 
-# Aliasses
+# Aliases
 alias ll="ls -lh"
 alias ls="ls -ll"
 alias la="ls -lah"
+
+alias m='atom'
+
+alias cfg='m ~/dotfiles'
+
+alias emptytrash="sudo rm -rf ~/.Trash/*"
+alias wget="curl -O"
+
+alias o="open"
+alias flushcache="dscacheutil -flushcache"
+
+alias kf="killall Finder"
+
+alias untar='tar -xjvf'
+
+alias flushdns='sudo dscacheutil -flushcache && sudo killall -9 mDNSResponder'
+
+# GDS
+
+alias gds='cd ~/govuk/govuk-puppet/development-vm && vagrant ssh'

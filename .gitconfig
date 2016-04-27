@@ -69,4 +69,4 @@
 [grep]
   lineNumber = true
 [core]
-  excludesfile = /Users/tijmen/.gitignore_global
+  excludesfile = ~/.gitignore_global

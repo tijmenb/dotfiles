@@ -1,16 +1,55 @@
-alias vi="vim"
-alias be="bundle exec"
-alias ber="bundle exec rake"
-alias bes="bundle exec spec"
-alias bec="bundle exec cucumber"
-alias rs="rails s"
-alias rc="rails c"
-alias r="rails"
-alias ss="git pow"
-alias gs="git show"
+# Run a simple web server for the current directory
+alias server='python -m SimpleHTTPServer'
 
-if [[ $OSTYPE =~ darwin* ]] ; then
-  alias ls="ls -laFG"
-else
-  alias ls="ls -al --color"
-fi;
+alias hub="github"
+
+# GIT
+alias gs="git status -sb"
+alias gh="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
+
+alias cleanup='git checkout master && git branch --merged | grep -v "\*" | grep -v master | grep -v dev | xargs -n 1 git branch -d'
+
+alias dev="git checkout develop"
+alias mas="git checkout master"
+alias stag="git checkout staging"
+alias stage="git checkout staging"
+
+alias gc="git commit"
+alias ga="git add"
+alias gca="git commit -am"
+alias gco="git checkout"
+
+alias push="git push"
+alias pull="git pull"
+alias gitsync='git fetch upstream && git checkout master && git merge upstream/master && git push'
+
+# Git flow
+alias gf="git flow"
+alias gff="gf feature"
+alias gffc="gff checkout"
+
+# Ruby/Rails/Dev
+
+alias r="rake"
+alias be="bundle exec"
+alias t="bundle exec rspec -f d --colour"
+alias z="zeus"
+alias zues="zeus"
+alias zr="zeus rake"
+alias zz="zeus rake"
+alias zs="zeus server"
+alias zc="zeus console"
+alias zt="zeus rspec spec"
+alias zrdbm="zeus rake db:migrate && zeus rake db:test:prepare"
+alias zrbdm="zrdbm"
+alias zrdb="zrdbm"
+
+alias h="heroku"
+
+# Typos
+alias rail='rails'
+
+# Aliasses
+alias ll="ls -lh"
+alias ls="ls -ll"
+alias la="ls -lah"

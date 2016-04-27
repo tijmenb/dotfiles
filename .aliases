@@ -19,8 +19,7 @@ alias ga="git add"
 alias gca="git commit -am"
 alias gco="git checkout"
 
-alias push="git push"
-alias pull="git pull"
+alias gp="git push"
 alias gitsync='git fetch upstream && git checkout master && git merge upstream/master && git push'
 
 # Git flow

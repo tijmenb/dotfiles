@@ -4,15 +4,16 @@ alias server='python -m SimpleHTTPServer'
 alias hub="github"
 
 # GIT
-alias gs="git status -sb"
-alias gh="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
-
 alias cleanup='git checkout master && git branch --merged | grep -v "\*" | grep -v master | grep -v dev | xargs -n 1 git branch -d'
 
 alias dev="git checkout develop"
 alias mas="git checkout master"
 alias stag="git checkout staging"
 alias stage="git checkout staging"
+
+alias gb="git branch"
+alias gs="git status -sb"
+alias gh="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
 
 alias gc="git commit"
 alias ga="git add"

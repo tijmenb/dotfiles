@@ -11,8 +11,8 @@ unset file;
 
 HISTFILESIZE=3500
 
-export EDITOR=atom
-export BUNDLER_EDITOR=atom
+export EDITOR=vim
+export BUNDLER_EDITOR=vim
 export LC_CTYPE=en_GB.UTF-8
 export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
 

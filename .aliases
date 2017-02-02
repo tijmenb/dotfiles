@@ -73,3 +73,5 @@ alias flushdns='sudo dscacheutil -flushcache && sudo killall -9 mDNSResponder'
 # GDS
 
 alias gds='cd ~/govuk/govuk-puppet/development-vm && vagrant ssh'
+
+alias grm='git checkout master && git pull && git checkout - && git rebase master'

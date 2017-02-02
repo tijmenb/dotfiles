@@ -15,6 +15,7 @@ export EDITOR=vim
 export BUNDLER_EDITOR=vim
 export LC_CTYPE=en_GB.UTF-8
 export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
+export GOPATH=$HOME/go
 
 # colour codes
 PURPLE="\[\033[0;35m\]"

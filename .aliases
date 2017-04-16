@@ -4,7 +4,7 @@ alias server='python -m SimpleHTTPServer'
 alias hub="github"
 
 # GIT
-alias cleanup='git checkout master && git branch --merged | grep -v "\*" | grep -v master | grep -v dev | xargs -n 1 git branch -d'
+alias cleanup='git checkout master && git pull && git branch --merged | grep -v "\*" | grep -v master | grep -v dev | xargs -n 1 git branch -d'
 
 alias dev="git checkout develop"
 alias mas="git checkout master"

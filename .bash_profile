@@ -6,10 +6,7 @@ if [ -f ~/.bashrc ]; then
 fi
 
 # Load the necessary shell dotfiles
-for file in ~/.{aliases}; do
-	[ -r "$file" ] && [ -f "$file" ] && source "$file";
-done;
-unset file;
+source ~/.aliases
 
 HISTFILESIZE=3500
 

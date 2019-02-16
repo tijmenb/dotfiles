@@ -1,77 +1,46 @@
 # Run a simple web server for the current directory
 alias server='python -m SimpleHTTPServer'
 
+# Open the GitHub app
 alias hub="github"
 
-# GIT
+# Open Atom (this used to be `m` for textmate)
+alias m='atom'
+
+# Open something in Finder
+alias o="open"
+
+# Pull master and remove all merged branches
 alias cleanup='git checkout master && git pull && git branch --merged | grep -v "\*" | grep -v master | grep -v dev | xargs -n 1 git branch -d'
 
-alias dev="git checkout develop"
+# Rebase the current branch on top of master
+alias grm='git checkout master && git pull && git checkout - && git rebase master --ignore-date'
+
 alias mas="git checkout master"
-alias stag="git checkout staging"
-alias stage="git checkout staging"
 
 alias gb="git branch"
 alias gs="git status -sb"
 alias gh="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
-
 alias gc="git commit"
 alias ga="git add"
 alias gca="git commit -am"
 alias gco="git checkout"
-
 alias gp="git push"
-alias gitsync='git fetch upstream && git checkout master && git merge upstream/master && git push'
-
-# Git flow
-alias gf="git flow"
-alias gff="gf feature"
-alias gffc="gff checkout"
 
 # Ruby/Rails/Dev
 
-alias r="rake"
 alias be="bundle exec"
 alias t="bundle exec rspec -f d --colour"
-alias z="zeus"
-alias zues="zeus"
-alias zr="zeus rake"
-alias zz="zeus rake"
-alias zs="zeus server"
-alias zc="zeus console"
-alias zt="zeus rspec spec"
-alias zrdbm="zeus rake db:migrate && zeus rake db:test:prepare"
-alias zrbdm="zrdbm"
-alias zrdb="zrdbm"
-
-alias h="heroku"
 
 # Typos
 alias rail='rails'
 
-# Aliases
+# `ls`
 alias ll="ls -lh"
 alias ls="ls -ll"
 alias la="ls -lah"
 
-alias m='atom'
-
-alias cfg='m ~/dotfiles'
-
-alias emptytrash="sudo rm -rf ~/.Trash/*"
 alias wget="curl -O"
 
-alias o="open"
-alias flushcache="dscacheutil -flushcache"
-
-alias kf="killall Finder"
-
-alias untar='tar -xjvf'
-
-alias flushdns='sudo dscacheutil -flushcache && sudo killall -9 mDNSResponder'
-
-# GDS
-
+# GOV.UK specific
 alias gds='cd ~/govuk/govuk-puppet/development-vm && vagrant ssh'
-
-alias grm='git checkout master && git pull && git checkout - && git rebase master'

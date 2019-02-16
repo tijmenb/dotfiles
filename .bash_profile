@@ -1,10 +1,12 @@
+# NOTE: Only edit this file in dev/dotfiles
+
 # use the the existent ~/.bashrc if there's one
 if [ -f ~/.bashrc ]; then
   source ~/.bashrc
 fi
 
 # Load the necessary shell dotfiles
-for file in ~/.{aliases,govuk}; do
+for file in ~/.{aliases}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
@@ -15,6 +17,8 @@ export EDITOR=vim
 export BUNDLER_EDITOR=vim
 export LC_CTYPE=en_GB.UTF-8
 export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
+
+# Go
 export GOPATH=$HOME/go
 
 # colour codes
@@ -64,14 +68,9 @@ function set_bash_prompt {
     GIT=''
   fi
 
-  username="$(git config github.user)"
+  username="$(whoami)"
 
-  # identify when using vagrant VM
-  if [[ $OSTYPE == linux* && $(whoami) -eq vagrant ]] ; then
-    PS1="$GRAY\A $LIGHT_RED[\h] \[$(tput setaf 6)\]\W$GIT\[$(tput sgr0)\] \\$ "
-  else
-    PS1="$GRAY$time$LIGHT_RED @$username $WHITE\w$GIT $COLOR_NONE\$ "
-  fi
+  PS1="$GRAY$time$LIGHT_RED @$username $WHITE\w$GIT $COLOR_NONE\$ "
 }
 
 # set the prompt

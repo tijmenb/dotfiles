@@ -1,0 +1,48 @@
+# NOTE: Only edit this file in dev/dotfiles
+
+# Run a simple web server for the current directory
+alias server='python -m SimpleHTTPServer'
+
+# Open the GitHub app
+alias hub="github"
+
+# Open Atom (this used to be `m` for textmate)
+alias m='atom'
+
+# Open something in Finder
+alias o="open"
+
+# Pull master and remove all merged branches
+alias cleanup='git checkout master && git pull && git branch --merged | grep -v "\*" | grep -v master | grep -v dev | xargs -n 1 git branch -d'
+
+# Rebase the current branch on top of master
+alias grm='git checkout master && git pull && git checkout - && git rebase master --ignore-date'
+
+alias mas="git checkout master"
+
+alias gb="git branch"
+alias gs="git status -sb"
+alias gh="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
+alias gc="git commit"
+alias ga="git add"
+alias gca="git commit -am"
+alias gco="git checkout"
+alias gp="git push"
+
+# Ruby/Rails/Dev
+
+alias be="bundle exec"
+alias t="bundle exec rspec -f d --colour"
+
+# Typos
+alias rail='rails'
+
+# `ls`
+alias ll="ls -lh"
+alias ls="ls -ll"
+alias la="ls -lah"
+
+alias wget="curl -O"
+
+# GOV.UK specific
+alias gds='cd ~/govuk/govuk-puppet/development-vm && vagrant ssh'

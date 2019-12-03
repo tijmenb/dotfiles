@@ -19,7 +19,6 @@
 # brew "elixir"
 # brew "gdk-pixbuf"
 # brew "git", link: false
-# brew "git-flow"
 # brew "gmp"
 # brew "gsettings-desktop-schemas", link: false
 # brew "gtk+3"
@@ -56,7 +55,7 @@ brew "graphviz"
 # brew "ossp-uuid"
 # brew "pandoc"
 # brew "pdf2htmlex"
-# brew "postgresql", restart_service: true
+brew "postgresql", restart_service: true
 brew "postgresql@9.6", restart_service: true
 # brew "pth"
 # brew "pyenv"
@@ -64,13 +63,13 @@ brew "postgresql@9.6", restart_service: true
 # brew "rabbitmq"
 brew "rbenv"
 # brew "reattach-to-user-namespace"
-# brew "redis"
+brew "redis", restart_service: true
 # brew "the_silver_searcher"
 # brew "tmux"
 # brew "unixodbc"
 # brew "vim"
 # brew "watch"
-# brew "yarn"
+brew "yarn"
 # brew "cloudfoundry/tap/cf-cli"
 # brew "puma/puma/puma-dev"
 # brew "shopify/shopify/qt@5.5", link: true

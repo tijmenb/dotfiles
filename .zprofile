@@ -3,6 +3,8 @@
 export LC_CTYPE=en_GB.UTF-8
 export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
 
+export BUNDLE_JOBS=8
+
 # Load the necessary shell dotfiles
 source ~/.zsh/.aliases
 PROMPT='%B%m%~%b$(git_super_status) %# '
